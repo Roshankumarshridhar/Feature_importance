@@ -1,10 +1,8 @@
+# TEM-1 β-Lactamase Variant Analysis
+
 <div align="center">
   <img src="https://github.com/Roshankumarshridhar/Feature_importance/blob/main/image-1.png?raw=true">
 </div>
-
-
-
-# TEM-1 β-Lactamase Variant Analysis
 
 ## Dataset
 Our study utilized variants of TEM-1 β-lactamases and their corresponding Minimum Inhibitory Concentration (MIC) values. The dataset includes MIC values for 990 variants, classified as resistant or susceptible based on MIC relative to the wild type (WT) for amoxicillin. Resistance is indicated by positive MIC values, while susceptibility is indicated by negative MIC values. Variants such as A237T, G238S, and E104K were classified as susceptible, whereas E240K, N175S, and Q39K were classified as resistant ([Reference](https://doi.org/10.1073/pnas.1215206110)).
@@ -33,9 +31,37 @@ Our study utilized variants of TEM-1 β-lactamases and their corresponding Minim
 - Constructed using **RING 4.0**.
 - Hydrogen bond frequency network was analyzed over the last 50 ns.
 
+## Install
+To set up the environment for running the analysis and machine learning models, install the required dependencies using pip:
+
+```sh
+$ pip install openpyxl imbalanced-learn numpy pandas scikit-learn matplotlib
+```
+
+For oversampling techniques like **SMOTE**, ensure `imbalanced-learn` is installed.
+
+To work with **Jupyter notebooks**, install:
+
+```sh
+$ pip install jupyterlab
+```
+
+### Try Running the Code
+Open Python and check if the required libraries are installed:
+
+```sh
+$ python
+>>> import numpy as np
+>>> import pandas as pd
+>>> from sklearn.ensemble import RandomForestClassifier
+>>> model = RandomForestClassifier()
+>>> print("Setup successful!")
+```
+
+If you see `"Setup successful!"`, the installation was successful and you are ready to proceed!
+
 ## Machine Learning Workflow
 ```python
-pip install openpyxl imbalanced-learn
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -74,3 +100,10 @@ for name, model in models.items():
     y_pred = model.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
     print(f"{name} Accuracy: {acc:.2f}")
+```
+
+## Contribution Guidelines
+If you would like to contribute, check out the [Contribution Guidelines](CONTRIBUTING.md). 
+
+## License
+This project is licensed under the [Apache License 2.0](LICENSE).
