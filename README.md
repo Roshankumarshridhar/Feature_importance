@@ -24,9 +24,9 @@ Our study utilized variants of TEM-1 β-lactamases and their corresponding Minim
 2. **Support Vector Machines (SVM)** - Identified complex nonlinear patterns in high-dimensional data.
 3. **Random Forest** - Improved accuracy and robustness against noise and overfitting.
 
-## Essential Dynamics Analysis
-- **Principal Component Analysis (PCA)** on C-alpha coordinates to determine motion.
-- **RMSIP Analysis** was conducted to compare the similarity of motion directions.
+## Feature Importance
+
+To identify the most significant features contributing to phenotype prediction, we utilized a **Random Forest Classifier** to compute feature importance scores.
 
 
 ## Modules required for the Workflow
