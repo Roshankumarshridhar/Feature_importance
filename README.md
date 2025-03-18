@@ -3,7 +3,6 @@
 </div>
 
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4724125.svg)](https://doi.org/10.5281/zenodo.4724125)
 
 # TEM-1 β-Lactamase Variant Analysis
 
