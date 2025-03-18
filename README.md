@@ -33,14 +33,7 @@ Our study utilized variants of TEM-1 β-lactamases and their corresponding Minim
 - Hydrogen bond frequency network was analyzed over the last 50 ns.
 
 
-## Machine Learning Workflow
+## Modules required for the Workflow
 ```python
-pip install openpyxl imbalanced-learn
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.svm import SVC
-from sklearn.metrics import accuracy_score
-from imblearn.over_sampling import SMOTE
+pip install openpyxl imbalanced-learn scikit-learn pandas numpy matplotlib
+
