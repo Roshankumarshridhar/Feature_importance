@@ -1,8 +1,8 @@
 <div align="center">
-  <https://raw.githubusercontent.com/Roshankumarshridhar/Feature_importance/refs/heads/main/image-1.png ">
+  <img src="https://github.com/Roshankumarshridhar/Feature_importance/blob/main/image-1.png?raw=true">
 </div>
 
-[![Python](https://img.shields.io/pypi/pyversions/tensorflow.svg)](https://badge.fury.io/py/tensorflow)
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4724125.svg)](https://doi.org/10.5281/zenodo.4724125)
 
 # TEM-1 β-Lactamase Variant Analysis
@@ -75,10 +75,3 @@ for name, model in models.items():
     y_pred = model.predict(X_test)
     acc = accuracy_score(y_test, y_pred)
     print(f"{name} Accuracy: {acc:.2f}")
-```
-
-## Contribution Guidelines
-If you would like to contribute, check out the [Contribution Guidelines](CONTRIBUTING.md). 
-
-## License
-This project is licensed under the [Apache License 2.0](LICENSE).
