@@ -28,10 +28,6 @@ Our study utilized variants of TEM-1 β-lactamases and their corresponding Minim
 - **Principal Component Analysis (PCA)** on C-alpha coordinates to determine motion.
 - **RMSIP Analysis** was conducted to compare the similarity of motion directions.
 
-## Residue Interaction Network
-- Constructed using **RING 4.0**.
-- Hydrogen bond frequency network was analyzed over the last 50 ns.
-
 
 ## Modules required for the Workflow
 ```python
