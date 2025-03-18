@@ -5,16 +5,29 @@
 
 # TEM-1 β-Lactamase Variant Analysis
 
-## Overview
-This project explores the structural and dynamic properties of TEM-1 β-lactamase variants to understand their impact on antibiotic resistance. We employed **Replica Exchange Molecular Dynamics (REMD) simulations** and **Machine Learning models** for phenotype prediction.
+## Dataset
+Our study utilized variants of TEM-1 β-lactamases and their corresponding Minimum Inhibitory Concentration (MIC) values. The dataset includes MIC values for 990 variants, classified as resistant or susceptible based on MIC relative to the wild type (WT) for amoxicillin. Resistance is indicated by positive MIC values, while susceptibility is indicated by negative MIC values. Variants such as A237T, G238S, and E104K were classified as susceptible, whereas E240K, N175S, and Q39K were classified as resistant ([Reference](https://doi.org/10.1073/pnas.1215206110)).
 
-## Key Components
-- **Dataset**: MIC values for 990 TEM-1 β-lactamase variants.
-- **REMD Simulations**: Temperature range (310 K - 328 K), OPLS4 force field, TIP3P water model.
-- **Feature Extraction**: Dihedral angles (φ, ψ) from the last 50 ns of REMD simulations.
-- **Machine Learning Models**: Random Forest, SVM, Linear Regression.
-- **Essential Dynamics Analysis**: PCA-based motion analysis and Residue Interaction Networks.
+## REMD Simulations
+- Six variants and the WT underwent Replica Exchange Molecular Dynamics (REMD) simulations.
+- OPLS4 force field and TIP3P water model were used.
+- Temperature range: 310 K to 328 K, each simulation lasting 100 ns.
+- The last 50 ns was used for feature extraction.
 
-## Installation
-```sh
-pip install -r requirements.txt
+## Feature Extraction
+- **Dihedral Angles**: The φ (phi) and ψ (psi) dihedral angles of all 263 amino acids were extracted.
+- **Data Volume**: 70,000 frames in total (40,000 susceptible, 30,000 resistant).
+- **Scaling**: Center scaling applied using Standard Scaler for normalization.
+
+## Classification Methods for Phenotype Prediction
+1. **Linear Regression** - Modeled the relationship between dihedral angles and mutation effects.
+2. **Support Vector Machines (SVM)** - Identified complex nonlinear patterns in high-dimensional data.
+3. **Random Forest** - Improved accuracy and robustness against noise and overfitting.
+
+## Essential Dynamics Analysis
+- **Principal Component Analysis (PCA)** on C-alpha coordinates to determine motion.
+- **RMSIP Analysis** was conducted to compare the similarity of motion directions.
+
+## Residue Interaction Network
+- Constructed using **RING 4.0**.
+- Hydrogen bond frequency network was analyzed over the last 50 ns.
